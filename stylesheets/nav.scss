@@ -1,0 +1,29 @@
+@import './colors';
+
+nav.navBar {
+  z-index: 50;
+  position: fixed;
+  width: 100%;
+  background-color: $code;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+
+  & > .bar {
+
+    & > div.optionButton {
+      display: inline-flex;
+      flex-direction: column;
+      right: 0;
+      height: 30px;
+      float: right;
+      margin: 10px;
+
+      & > div {
+        width: 30px;
+        height: 5px;
+        margin: 2.5px;
+        background-color: white;
+        border-radius: 2.5px;
+      }
+    }
+  }
+}

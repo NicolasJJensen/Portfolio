@@ -1,0 +1,102 @@
+@import './colors';
+
+$badgeHeight: 180;
+$imgSize: 100;
+$navHeight: 50;
+
+body {
+  background-color: $code;
+  height: 100vh;
+  font-weight: 100;
+}
+
+main {
+  padding-top: 40px;
+  position: relative;
+  top: 45px;
+  height: calc(100vh);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+
+  & > .introduction {
+
+    transform: translateY(-100%);
+    color: white;
+  
+    & > * {
+      text-align: center;
+    }
+  
+    & > .mainIntro {
+      font-size: 25px;
+    }
+  
+    & > .jobDescription {
+      font-size: 22px;
+    }
+  
+    & .jobTitle {
+      color: $peach;
+    }
+  
+    & .name {
+      color: $yellow;
+    }
+  }
+}
+
+.myBadge {
+  background-color: $peach;
+  transform: translateY(-85%);
+  display: flex;
+  justify-content: center;
+  clip-path: polygon(100% 15%, 100% 100%, 50% 85%, 0 100%, 0 15%, 50% 0);
+
+  & > .badge {
+    display: flex;
+    align-items: center;
+    padding: #{($badgeHeight - $imgSize)/2 + 'px 0'};
+
+    & > img {
+      margin-right: 20px;
+      width: #{$imgSize + 'px'};
+      height: #{$imgSize + 'px'};
+      border-radius: 50%;
+      border: 3px solid white;
+    }
+  
+    & > .information {
+      display: inline-block;
+      color: $yellow;
+      font-size: 28px;
+
+      & > .name {
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.menu {
+  position: relative;
+  z-index: -1;
+  height: calc(100vh - #{$badgeHeight*0.70+$navHeight + 'px'});
+  transform: translateY(#{-$badgeHeight + 'px'});
+  background-color: $pale;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+
+  & a {
+    color: $paleText;
+    text-decoration: none;
+  }
+
+  & p {
+    padding: 20px;
+    font-size: 40px;
+  }
+}
