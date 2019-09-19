@@ -69,7 +69,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   async function handleScroll() {
     var scroll_amount = (window.scrollY || window.scrollTop || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0)
-    console.log(scroll_amount)
     if(scroll_amount > window.innerHeight - 500){
       for(var i = 0; i < menu.children.length; i++){
         menu.children[i].classList.add("slideIn")

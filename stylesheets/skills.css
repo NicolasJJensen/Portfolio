@@ -1,3 +1,45 @@
+.infoBox {
+  width: 100vw;
+  height: calc(100vh - 50px);
+  position: absolute;
+  background-color: #1C2238;
+  -webkit-clip-path: circle(0% at 0 0);
+          clip-path: circle(0% at 0 0);
+}
+
+.infoBox .titleBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.infoBox .titleBar .infoImg {
+  position: relative;
+  width: calc(0.7071 * 20vw);
+  height: calc(0.7071 * 20vw);
+}
+
+.infoBox .titleBar .infoImg.expand {
+  -webkit-transition: -webkit-transform 0.8s linear;
+  transition: -webkit-transform 0.8s linear;
+  transition: transform 0.8s linear;
+  transition: transform 0.8s linear, -webkit-transform 0.8s linear;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: scale(3);
+          transform: scale(3);
+}
+
+.infoBox .titleBar .infoTitle {
+  color: #FFF4EC;
+  position: relative;
+  display: inline-table;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
 main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -39,60 +81,82 @@ main > .skillOptions > .skillContainer > .main {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 600;
   color: #FFF4EC;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  -webkit-transition: -webkit-box-shadow 0.2s;
+  transition: -webkit-box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
+}
+
+main > .skillOptions > .skillContainer:hover > .main {
+  -webkit-transition: -webkit-box-shadow 0.2s;
+  transition: -webkit-box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
+  -webkit-box-shadow: 0px 0px 25px -5px black;
+          box-shadow: 0px 0px 25px -5px black;
 }
 
 main > .skillOptions > .skillContainer:hover > .allSkills > .skill:nth-child(1) {
-  -webkit-animation: expand 0.3s cubic-bezier(0.75, 0.2, 0.5, 0.7) 0.075s forwards;
-          animation: expand 0.3s cubic-bezier(0.75, 0.2, 0.5, 0.7) 0.075s forwards;
+  -webkit-animation: expand 0.3s cubic-bezier(0.75, 0.2, 0.5, 0.7) 0.05s forwards;
+          animation: expand 0.3s cubic-bezier(0.75, 0.2, 0.5, 0.7) 0.05s forwards;
 }
 
 main > .skillOptions > .skillContainer:hover > .allSkills > .skill:nth-child(2) {
+  -webkit-animation: expand 0.3s cubic-bezier(0.75, 0.2, 0.5, 0.7) 0.1s forwards;
+          animation: expand 0.3s cubic-bezier(0.75, 0.2, 0.5, 0.7) 0.1s forwards;
+}
+
+main > .skillOptions > .skillContainer:hover > .allSkills > .skill:nth-child(3) {
   -webkit-animation: expand 0.3s cubic-bezier(0.75, 0.2, 0.5, 0.7) 0.15s forwards;
           animation: expand 0.3s cubic-bezier(0.75, 0.2, 0.5, 0.7) 0.15s forwards;
 }
 
-main > .skillOptions > .skillContainer:hover > .allSkills > .skill:nth-child(3) {
-  -webkit-animation: expand 0.3s cubic-bezier(0.75, 0.2, 0.5, 0.7) 0.225s forwards;
-          animation: expand 0.3s cubic-bezier(0.75, 0.2, 0.5, 0.7) 0.225s forwards;
+main > .skillOptions > .skillContainer:hover > .allSkills > .skill:nth-child(4) {
+  -webkit-animation: expand 0.3s cubic-bezier(0.75, 0.2, 0.5, 0.7) 0.2s forwards;
+          animation: expand 0.3s cubic-bezier(0.75, 0.2, 0.5, 0.7) 0.2s forwards;
 }
 
-main > .skillOptions > .skillContainer:hover > .allSkills > .skill:nth-child(4) {
+main > .skillOptions > .skillContainer:hover > .allSkills > .skill:nth-child(5) {
+  -webkit-animation: expand 0.3s cubic-bezier(0.75, 0.2, 0.5, 0.7) 0.25s forwards;
+          animation: expand 0.3s cubic-bezier(0.75, 0.2, 0.5, 0.7) 0.25s forwards;
+}
+
+main > .skillOptions > .skillContainer:hover > .allSkills > .skill:nth-child(6) {
   -webkit-animation: expand 0.3s cubic-bezier(0.75, 0.2, 0.5, 0.7) 0.3s forwards;
           animation: expand 0.3s cubic-bezier(0.75, 0.2, 0.5, 0.7) 0.3s forwards;
 }
 
-main > .skillOptions > .skillContainer:hover > .allSkills > .skill:nth-child(5) {
-  -webkit-animation: expand 0.3s cubic-bezier(0.75, 0.2, 0.5, 0.7) 0.375s forwards;
-          animation: expand 0.3s cubic-bezier(0.75, 0.2, 0.5, 0.7) 0.375s forwards;
-}
-
-main > .skillOptions > .skillContainer:hover > .allSkills > .skill:nth-child(6) {
-  -webkit-animation: expand 0.3s cubic-bezier(0.75, 0.2, 0.5, 0.7) 0.45s forwards;
-          animation: expand 0.3s cubic-bezier(0.75, 0.2, 0.5, 0.7) 0.45s forwards;
-}
-
 main > .skillOptions > .skillContainer:hover > .allSkills > .skill:nth-child(7) {
-  -webkit-animation: expand 0.3s cubic-bezier(0.75, 0.2, 0.5, 0.7) 0.525s forwards;
-          animation: expand 0.3s cubic-bezier(0.75, 0.2, 0.5, 0.7) 0.525s forwards;
+  -webkit-animation: expand 0.3s cubic-bezier(0.75, 0.2, 0.5, 0.7) 0.35s forwards;
+          animation: expand 0.3s cubic-bezier(0.75, 0.2, 0.5, 0.7) 0.35s forwards;
 }
 
 main > .skillOptions > .skillContainer:hover > .allSkills > .skill:nth-child(8) {
-  -webkit-animation: expand 0.3s cubic-bezier(0.75, 0.2, 0.5, 0.7) 0.6s forwards;
-          animation: expand 0.3s cubic-bezier(0.75, 0.2, 0.5, 0.7) 0.6s forwards;
+  -webkit-animation: expand 0.3s cubic-bezier(0.75, 0.2, 0.5, 0.7) 0.4s forwards;
+          animation: expand 0.3s cubic-bezier(0.75, 0.2, 0.5, 0.7) 0.4s forwards;
+}
+
+main > .skillOptions > .skillContainer:hover > .allSkills > .skill:hover {
+  -webkit-transition: -webkit-box-shadow 0.2s;
+  transition: -webkit-box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
+  -webkit-box-shadow: 0px 0px 15px -4px black;
+          box-shadow: 0px 0px 15px -4px black;
 }
 
 main > .skillOptions > .skillContainer > .allSkills {
   -webkit-transform-origin: 0 0;
           transform-origin: 0 0;
-  -webkit-animation: rotate 60s linear infinite;
-          animation: rotate 60s linear infinite;
+  -webkit-animation: rotate 120s linear infinite;
+          animation: rotate 120s linear infinite;
   position: relative;
   top: 50%;
   left: 50%;
@@ -115,6 +179,13 @@ main > .skillOptions > .skillContainer > .allSkills > .skill {
   position: absolute;
   -webkit-transform: scale(0);
           transform: scale(0);
+  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+          box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  cursor: pointer;
+  -webkit-transition: -webkit-box-shadow 0.2s;
+  transition: -webkit-box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
 }
 
 main > .skillOptions > .skillContainer > .allSkills > .skill:nth-child(1) {
@@ -158,7 +229,7 @@ main > .skillOptions > .skillContainer > .allSkills > .skill:nth-child(8) {
 }
 
 main > .skillOptions > .skillContainer > .allSkills > .skill > .skillImg {
-  animation: rotate 60s linear infinite reverse;
+  animation: rotate 120s linear infinite reverse;
   width: calc(0.7071 * 20vw);
   height: calc(0.7071 * 20vw);
 }
@@ -193,6 +264,28 @@ main > .skillOptions > .skillContainer > .allSkills > .skill > .skillImg {
   }
 }
 
+@-webkit-keyframes smallExpand {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+@keyframes smallExpand {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
 @-webkit-keyframes expand {
   0% {
     -webkit-transform: scale(0);
@@ -223,20 +316,46 @@ main > .skillOptions > .skillContainer > .allSkills > .skill > .skillImg {
   }
 }
 
+@-webkit-keyframes expandInfoImg {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(3);
+            transform: scale(3);
+  }
+}
+
+@keyframes expandInfoImg {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(3);
+            transform: scale(3);
+  }
+}
+
 @media screen and (min-aspect-ratio: 1 / 1) {
   body {
     height: 100vh;
+  }
+  .infoBox > .titleBar > .infoImg {
+    width: calc(0.7071 * 15vh);
+    height: calc(0.7071 * 15vh);
   }
   main {
     max-height: 100vh;
   }
   main > .skillOptions > .skillContainer {
-    height: 100vh;
-    width: 100vh;
+    height: 80vh;
+    width: 80vh;
   }
   main > .skillOptions > .skillContainer > .main {
-    width: 35vh;
-    height: 35vh;
+    width: 30vh;
+    height: 30vh;
     top: calc(50% - 25px);
     left: calc(50% - 25px);
   }
@@ -245,44 +364,44 @@ main > .skillOptions > .skillContainer > .allSkills > .skill > .skillImg {
     left: calc(50% - 25px);
   }
   main > .skillOptions > .skillContainer > .allSkills > .skill {
-    width: 20vh;
-    height: 20vh;
+    width: 15vh;
+    height: 15vh;
   }
   main > .skillOptions > .skillContainer > .allSkills > .skill:nth-child(1) {
-    top: calc(0 * calc(80vh - 50px) - 10vh);
-    left: calc(0.5 * calc(80vh - 50px) - 10vh);
+    top: calc(0 * calc(65vh - 50px) - 7.5vh);
+    left: calc(0.5 * calc(65vh - 50px) - 7.5vh);
   }
   main > .skillOptions > .skillContainer > .allSkills > .skill:nth-child(2) {
-    top: calc(0.35355 * calc(80vh - 50px) - 10vh);
-    left: calc(0.35355 * calc(80vh - 50px) - 10vh);
+    top: calc(0.35355 * calc(65vh - 50px) - 7.5vh);
+    left: calc(0.35355 * calc(65vh - 50px) - 7.5vh);
   }
   main > .skillOptions > .skillContainer > .allSkills > .skill:nth-child(3) {
-    top: calc(0.5 * calc(80vh - 50px) - 10vh);
-    left: calc(0 * calc(80vh - 50px) - 10vh);
+    top: calc(0.5 * calc(65vh - 50px) - 7.5vh);
+    left: calc(0 * calc(65vh - 50px) - 7.5vh);
   }
   main > .skillOptions > .skillContainer > .allSkills > .skill:nth-child(4) {
-    top: calc(0.35355 * calc(80vh - 50px) - 10vh);
-    left: calc(-0.35355 * calc(80vh - 50px) - 10vh);
+    top: calc(0.35355 * calc(65vh - 50px) - 7.5vh);
+    left: calc(-0.35355 * calc(65vh - 50px) - 7.5vh);
   }
   main > .skillOptions > .skillContainer > .allSkills > .skill:nth-child(5) {
-    top: calc(0 * calc(80vh - 50px) - 10vh);
-    left: calc(-0.5 * calc(80vh - 50px) - 10vh);
+    top: calc(0 * calc(65vh - 50px) - 7.5vh);
+    left: calc(-0.5 * calc(65vh - 50px) - 7.5vh);
   }
   main > .skillOptions > .skillContainer > .allSkills > .skill:nth-child(6) {
-    top: calc(-0.35355 * calc(80vh - 50px) - 10vh);
-    left: calc(-0.35355 * calc(80vh - 50px) - 10vh);
+    top: calc(-0.35355 * calc(65vh - 50px) - 7.5vh);
+    left: calc(-0.35355 * calc(65vh - 50px) - 7.5vh);
   }
   main > .skillOptions > .skillContainer > .allSkills > .skill:nth-child(7) {
-    top: calc(-0.5 * calc(80vh - 50px) - 10vh);
-    left: calc(0 * calc(80vh - 50px) - 10vh);
+    top: calc(-0.5 * calc(65vh - 50px) - 7.5vh);
+    left: calc(0 * calc(65vh - 50px) - 7.5vh);
   }
   main > .skillOptions > .skillContainer > .allSkills > .skill:nth-child(8) {
-    top: calc(-0.35355 * calc(80vh - 50px) - 10vh);
-    left: calc(0.35356 * calc(80vh - 50px) - 10vh);
+    top: calc(-0.35355 * calc(65vh - 50px) - 7.5vh);
+    left: calc(0.35356 * calc(65vh - 50px) - 7.5vh);
   }
   main > .skillOptions > .skillContainer > .allSkills > .skill > .skillImg {
-    width: calc(0.7071 * 20vh);
-    height: calc(0.7071 * 20vh);
+    width: calc(0.7071 * 15vh);
+    height: calc(0.7071 * 15vh);
   }
 }
 /*# sourceMappingURL=skills.css.map */

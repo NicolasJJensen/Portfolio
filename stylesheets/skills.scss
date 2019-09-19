@@ -7,6 +7,39 @@ $littleSize: 20vw;
 $bigSize: 35vw;
 $maxSize: 100vw;
 
+.infoBox {
+  width: 100vw;
+  height: calc(100vh - 50px);
+  position: absolute;
+  background-color: $code;
+  clip-path: circle(0% at 0 0);
+
+  .titleBar {
+    display: flex;
+    position: relative;
+
+    .infoImg {
+      position: relative;
+      width: calc(0.7071 * #{$littleSize});
+      height: calc(0.7071 * #{$littleSize});
+
+      &.expand {
+        transition: transform 0.8s linear;
+        transform-origin: 0 0;
+        transform: scale(3);
+      }
+    }
+    
+    .infoTitle {
+      color: $pale;
+      position: relative;
+      display: inline-table;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
 main {
   display: flex;
   position: relative;
@@ -34,25 +67,39 @@ main {
         flex-direction: column;
         justify-content: center;
         text-align: center;
-        font-size: 30px;
+        font-size: 20px;
         font-weight: 600;
         color: $pale;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        transition: box-shadow 0.2s;
       }
 
-      &:hover > .allSkills > .skill {
-        @for $i from 1 through $programmingSkills {
-          &:nth-child(#{$i}) {
-            animation: expand 0.3s cubic-bezier(0.75, 0.2, 0.5, 0.7) $i*(0.075s) forwards;
+      &:hover {
+
+        & > .main {
+          transition: box-shadow 0.2s;
+          box-shadow: 0px 0px 25px -5px rgba(0,0,0,1);
+        }
+      
+        & > .allSkills > .skill {
+          @for $i from 1 through $programmingSkills {
+            &:nth-child(#{$i}) {
+              animation: expand 0.3s cubic-bezier(0.75, 0.2, 0.5, 0.7) $i*(0.05s) forwards;
+            }
+          }
+
+          &:hover {
+            transition: box-shadow 0.2s;
+            box-shadow: 0px 0px 15px -4px rgba(0,0,0,1);
           }
         }
       }
 
       & > .allSkills {
         transform-origin: 0 0;
-        animation: rotate 60s linear infinite;
+        animation: rotate 120s linear infinite;
         position: relative;
         top: 50%;
         left: 50%;
@@ -67,6 +114,9 @@ main {
           align-items: center;
           position: absolute;
           transform: scale(0);
+          box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+          cursor: pointer;
+          transition: box-shadow 0.2s;
 
           @for $i from 1 through $programmingSkills {
             &:nth-child(#{$i}) {
@@ -76,7 +126,7 @@ main {
           }
 
           & > .skillImg {
-            animation: rotate 60s linear infinite reverse;
+            animation: rotate 120s linear infinite reverse;
             width: calc(0.7071 * #{$littleSize});
             height: calc(0.7071 * #{$littleSize});
           }
@@ -100,6 +150,14 @@ main {
   }
 }
 
+@keyframes smallExpand {
+  from {
+    transform: scale(1);
+  } to {
+    transform: scale(1.2);
+  }
+}
+
 @keyframes expand {
   0% {
     transform: scale(0);
@@ -112,15 +170,27 @@ main {
   }
 }
 
-
+@keyframes expandInfoImg {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(3);
+  }
+}
 
 @media screen and (min-aspect-ratio:1/1) {
-  $maxSize: 100vh;
-  $littleSize: 20vh;
-  $bigSize: 35vh;
+  $maxSize: 80vh;
+  $littleSize: 15vh;
+  $bigSize: 30vh;
 
   body {
     height: 100vh;
+  }
+
+  .infoBox > .titleBar > .infoImg {
+    width: calc(0.7071 * #{$littleSize});
+    height: calc(0.7071 * #{$littleSize});
   }
 
   main {
