@@ -63,7 +63,24 @@ async function animateText(elem, textList) {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function(event) { 
+document.addEventListener("DOMContentLoaded", function(event) {
+  
+  var menu = document.querySelector('.menu')
+
+  async function handleScroll() {
+    var scroll_amount = (window.scrollY || window.scrollTop || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0)
+    console.log(scroll_amount)
+    if(scroll_amount > window.innerHeight - 500){
+      for(var i = 0; i < menu.children.length; i++){
+        menu.children[i].classList.add("slideIn")
+        await sleep(100)
+      }
+      document.removeEventListener("click", handleScroll)
+    }
+  }
+
+  menu && document.addEventListener("scroll", handleScroll)
+
   var jobTitle = document.querySelector('.jobTitle')
 
   var personalHeader = document.querySelector('.personalClick')

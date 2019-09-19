@@ -1,0 +1,165 @@
+@import './colors';
+@import './badgeSize';
+@import './math';
+
+$programmingSkills: 8;
+$littleSize: 20vw;
+$bigSize: 35vw;
+$maxSize: 100vw;
+
+main {
+  display: flex;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  min-height: calc(100vh - 50px);
+  background-color: $pale;
+  justify-content: center;
+
+  & > .skillOptions {
+    width: 100vw;
+
+    & > .skillContainer {
+      position: relative;
+      height: #{$maxSize};
+      width: #{$maxSize};
+
+      & > .main {
+        width: #{$bigSize};
+        height: #{$bigSize};
+        border-radius: 50%;
+        background-color: $code;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 600;
+        color: $pale;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &:hover > .allSkills > .skill {
+        @for $i from 1 through $programmingSkills {
+          &:nth-child(#{$i}) {
+            animation: expand 0.3s cubic-bezier(0.75, 0.2, 0.5, 0.7) $i*(0.075s) forwards;
+          }
+        }
+      }
+
+      & > .allSkills {
+        transform-origin: 0 0;
+        animation: rotate 60s linear infinite;
+        position: relative;
+        top: 50%;
+        left: 50%;
+
+        & > .skill {
+          width: #{$littleSize};
+          height: #{$littleSize};
+          border-radius: 50%;
+          background-color: $code;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          transform: scale(0);
+
+          @for $i from 1 through $programmingSkills {
+            &:nth-child(#{$i}) {
+              top: calc(#{sin( pi() * 2 / $programmingSkills * ($i - 1)) * 0.5} * (#{$maxSize - $littleSize}) - #{$littleSize/2});
+              left: calc(#{cos( pi() * 2 / $programmingSkills * ($i - 1)) * 0.5} * (#{$maxSize - $littleSize}) - #{$littleSize/2});
+            }
+          }
+
+          & > .skillImg {
+            animation: rotate 60s linear infinite reverse;
+            width: calc(0.7071 * #{$littleSize});
+            height: calc(0.7071 * #{$littleSize});
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes expand {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+@media screen and (min-aspect-ratio:1/1) {
+  $maxSize: 100vh;
+  $littleSize: 20vh;
+  $bigSize: 35vh;
+
+  body {
+    height: 100vh;
+  }
+
+  main {
+    max-height: 100vh;
+
+    & > .skillOptions {
+      & > .skillContainer {
+        height: #{$maxSize};
+        width: #{$maxSize};
+
+        & > .main {
+          width: #{$bigSize};
+          height: #{$bigSize};
+          top: calc(50% - 25px);
+          left: calc(50% - 25px);
+        }
+
+        & > .allSkills {
+          top: calc(50% - 25px);
+          left: calc(50% - 25px);
+        }
+
+        & > .allSkills > .skill {
+          width: #{$littleSize};
+          height: #{$littleSize};
+
+          @for $i from 1 through $programmingSkills {
+            &:nth-child(#{$i}) {
+              top: calc(#{sin( pi() * 2 / $programmingSkills * ($i - 1)) * 0.5} * calc(#{$maxSize - $littleSize} - 50px) - #{$littleSize/2});
+              left: calc(#{cos( pi() * 2 / $programmingSkills * ($i - 1)) * 0.5} * calc(#{$maxSize - $littleSize} - 50px) - #{$littleSize/2});
+            }
+          }
+        }
+
+        & > .allSkills > .skill > .skillImg {
+          width: calc(0.7071 * #{$littleSize});
+          height: calc(0.7071 * #{$littleSize});
+        }
+      }
+    }
+  }
+}
