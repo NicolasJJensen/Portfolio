@@ -11,6 +11,13 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: relative;
 }
 
@@ -18,26 +25,58 @@
   position: relative;
   width: calc(0.7071 * 20vw);
   height: calc(0.7071 * 20vw);
-}
-
-.infoBox .titleBar .infoImg.expand {
-  -webkit-transition: -webkit-transform 0.8s linear;
-  transition: -webkit-transform 0.8s linear;
-  transition: transform 0.8s linear;
-  transition: transform 0.8s linear, -webkit-transform 0.8s linear;
   -webkit-transform-origin: 0 0;
           transform-origin: 0 0;
-  -webkit-transform: scale(3);
-          transform: scale(3);
 }
 
-.infoBox .titleBar .infoTitle {
+.infoBox .titleBar .infoTitleContainer {
+  overflow-y: hidden;
+  height: 0px;
+}
+
+.infoBox .titleBar .infoTitleContainer .infoTitle {
   color: #FFF4EC;
+  text-align: center;
   position: relative;
-  display: inline-table;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+}
+
+.infoBox .infoBreak {
+  margin: 3rem;
+  border: 0.5px solid white;
+  opacity: 0.7;
+  width: 90vw;
+  height: 0px;
+  margin: 0 5vw;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.infoBox .infoBreak.displayLine {
+  -webkit-animation: displayLine 0.2s ease-in-out forwards;
+          animation: displayLine 0.2s ease-in-out forwards;
+}
+
+.infoBox .info {
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  opacity: 0;
+  padding-left: 5vw;
+}
+
+.infoBox .info section {
+  margin: 3rem 0;
+  color: white;
+}
+
+.infoBox .info section h2 {
+  font-size: 23px;
+  font-weight: 200;
+}
+
+.infoBox .info.show {
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  opacity: 1;
 }
 
 main {
@@ -261,6 +300,28 @@ main > .skillOptions > .skillContainer > .allSkills > .skill > .skillImg {
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes displayLine {
+  from {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes displayLine {
+  from {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
   }
 }
 

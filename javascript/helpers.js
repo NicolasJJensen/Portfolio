@@ -11,3 +11,7 @@ export var repeat = (ms, func, ...args) => {
     }
   )
 }
+
+export var easing = (x) => {
+  return (x*x) / ( (x*x) + ((1-x) * (1-x)) )
+}

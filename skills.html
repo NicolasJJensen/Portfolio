@@ -12,17 +12,39 @@
     <link rel="stylesheet" href="stylesheets/skills.css" >
 
     <script src="javascript/helpers.js" type="module" ></script>
+    <script src="javascript/nav.js" type="module" ></script>
     <script src="javascript/skillPath.js" type="module" ></script>
   </head>
   <body>
     <nav class="navBar">
-        <div class="bar">
-          <div class="optionButton">
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-        </div>
+      <div class="logo">
+        <h4>Nicolas Jensen</h4>
+      </div>
+      <ul class="navLinks">
+        <li class="fadeOut">
+          <a href="#">Home</a>
+        </li>
+        <li class="fadeOut">
+          <a href="#">Skills</a>
+        </li>
+        <li class="fadeOut">
+          <a href="#">Experience</a>
+        </li>
+        <li class="fadeOut">
+          <a href="#">Projects</a>
+        </li>
+        <li class="fadeOut">
+          <a href="#">Goals</a>
+        </li>
+        <li class="fadeOut">
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+      <div class="burger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
       </nav>
 
       <main>
@@ -43,10 +65,32 @@
         </div>
 
         <div class="infoBox">
+
           <div class="titleBar">
             <img class="infoImg" src="" alt="">
-            <h1 class="infoTitle"></h1>
+            <div class="infoTitleContainer">
+              <h1 class="infoTitle">&nbsp;</h1>
+            </div>
           </div>
+
+          <div class="infoBreak"></div>
+
+          <div class="info">
+            <section>
+              <p class="technologyDescription"></p>
+            </section>
+            <section class="experience">
+              <h2>Experience With <span class="technology"></span>:</h2>
+              <p class="experienceDescription"></p>
+            </section>
+            <section class="previousWork">
+              <h2>Projects Using <span class="technology"></span>:</h2>
+              <div class="previousWorkDisplay">
+
+              </div>
+            </section>
+          </div>
+
         </div>
       </main>
   </body>

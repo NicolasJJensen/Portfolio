@@ -5,30 +5,135 @@ body {
   font-weight: 100;
 }
 
-nav.navBar {
-  z-index: 3;
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: $code;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
   width: 100vw;
-  background-color: $code;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  z-index: 3;
 
-  & > .bar {
-    & > div.optionButton {
-      display: inline-flex;
-      flex-direction: column;
-      right: 0;
-      height: 30px;
-      float: right;
-      margin: 10px;
+  .logo {
+    color: $pale;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+  }
 
-      & > div {
-        width: 30px;
-        height: 5px;
-        margin: 2.5px;
-        background-color: white;
-        border-radius: 2.5px;
+  .navLinks {
+    display: flex;
+    background-color: $code;
+    justify-content: space-around;
+    width: 60%;
+
+    li {
+      list-style: none;
+
+      a {
+        color: $pale;
+        text-decoration: none;
+        letter-spacing: 3px;
+        font-size: 14px;
       }
     }
+  }
+
+  .burger {
+    display: inline-flex;
+    flex-direction: column;
+    height: 30px;
+    margin: 10px;
+    display: none;
+
+    div {
+      width: 30px;
+      height: 5px;
+      margin: 4px;
+      background-color: $pale;
+      border-radius: 2.5px;
+      transition: all 0.2s;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  body{
+    overflow-x: hidden;
+  }
+
+  nav > .navLinks {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+
+    li {
+      &.fadeIn {
+        opacity: 0;
+        animation: navLinksFade 0.5s ease-in-out forwards;
+      }
+    }
+
+    &.navActive {
+      transition: transform 0.5s ease-in-out;
+      transform: translateX(0%);
+    }
+  }
+
+  nav > .burger {
+    cursor: pointer;
+    display: block;
+
+    &.toggle > div {
+      transform-origin: 50% 50%;
+
+      &:nth-child(1){
+        transition: all 0.2s;
+        transform: rotate(-45deg) translate(-3px, 10px);
+      }
+
+      &:nth-child(2){
+        transition: all 0.2s;
+        transform: translateX(-10px);
+        opacity: 0;
+      }
+
+      &:nth-child(3){
+        transition: all 0.2s;
+        transform: rotate(45deg) translate(-3px, -10px);
+      }
+    }
+  }
+}
+
+@keyframes navLinksFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  } to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes navLinksFadeOut {
+  from {
+    opacity: 1;
+    transform: translateX(0px);
+  } to {
+    opacity: 0;
+    transform: translateX(50px);
   }
 }
