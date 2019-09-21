@@ -53,7 +53,11 @@ export default function SkillInfo(props) {
               <img class="infoImg"
                 src={props.skill.src}
                 alt={props.skill.name}
-                style={{animation: "imgPosAnim 1s cubic-bezier(.75,-0.15,.25,1) forwards"}}
+                style={{
+                  animation: "imgPosAnim 1s cubic-bezier(.75,-0.15,.25,1) forwards",
+                  width: `${props.imgRect.width}px`,
+                  height: `${props.imgRect.height}px`
+                }}
               />
               <div class="infoTitleContainer">
                 <h1 class="infoTitle moveUp">{props.skill.name}</h1>

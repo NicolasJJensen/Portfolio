@@ -72,7 +72,7 @@ export default function Skills(props) {
   return (
     <Fragment>
       <Navbar />
-      <main>
+      <main class="skills">
         <SkillWheel skills={programming} skillClicked={skillClicked} />
         <SkillInfo skill={skill && skill.info} imgRect={skill && skill.imgRect} render={skill && skill.render} />
       </main>

@@ -1,10 +1,15 @@
 @import './colors';
 
-main {
+body {
+  height: auto;
+}
+
+main.skills {
   display: flex;
   position: relative;
-  overflow-x: hidden;
-  min-height: calc(100vh - 65px);
+  overflow: hidden;
+  height: calc(100vh - 65px);
   background-color: $pale;
-  justify-content: center;
+  align-items: center;
+  overflow: auto;
 }

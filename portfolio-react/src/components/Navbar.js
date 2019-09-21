@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import PropTypes from 'prop-types';
+import { BrowserRouter as Link } from "react-router-dom";
+
 import '../stylesheets/css/nav.css'
 
 export default function Navbar() {
@@ -9,23 +10,23 @@ export default function Navbar() {
   const links = [
     {
       name: 'Home',
-      src: 'index.html'
+      src: '/index.html'
     },
     {
       name: 'Skills',
-      src: 'index.html'
+      src: '/skills'
     },
     {
       name: 'Experience',
-      src: 'index.html'
+      src: '/experience'
     },
     {
       name: 'Projects',
-      src: 'index.html'
+      src: '/projects'
     },
     {
-      name: 'Goals',
-      src: 'index.html'
+      name: 'About Me',
+      src: '/about'
     }
   ]
 
@@ -37,7 +38,7 @@ export default function Navbar() {
       <ul class={active ? 'navLinks navActive' : 'navLinks'}>
         {links.map(link => (
           <li class={active ? 'fadeIn' : ''}>
-            <a href={link.src}>{link.name}</a>
+            <Link to={link.src}>{link.name}</Link>
           </li>
         ))}
       </ul>

@@ -1,5 +1,6 @@
 @import './colors';
 @import './badgeSize';
+
 $navHeight: 64;
 
 body {
@@ -7,10 +8,11 @@ body {
   height: calc(200vh - #{$badgeHeight + 'px'});
 }
 
-main {
+main.home {
   position: relative;
   width: 100vw;
   height: calc(100vh);
+  background-color: $code;
   display: flex;
   justify-content: center;
   flex-direction: column;

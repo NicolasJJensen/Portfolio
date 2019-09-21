@@ -5,7 +5,9 @@ $bigSize: 35vw;
 $maxSize: 100vw;
 
 .infoBox {
+  min-height: calc(100vh - 65px);
   width: 100vw;
+  top: 0px;
   position: absolute;
   background-color: $code;
   clip-path: circle(0% at 0 0);
