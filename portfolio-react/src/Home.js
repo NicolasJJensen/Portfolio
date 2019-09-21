@@ -1,8 +1,8 @@
 import React, {Fragment} from 'react';
 
 import Navbar from './components/Navbar'
-import './stylesheets/home.css';
 import Badge from './components/Badge';
+import './stylesheets/css/home.css';
 
 function Home() {
   return (

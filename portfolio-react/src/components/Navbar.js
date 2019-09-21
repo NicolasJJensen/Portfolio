@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import '../stylesheets/nav.css'
+import '../stylesheets/css/nav.css'
 
-function Navbar() {
+export default function Navbar() {
 
   const [active, setActive] = useState(false)
 
@@ -47,16 +47,5 @@ function Navbar() {
         <div></div>
       </button>
     </nav>
-  );
-}
-
-Navbar.propTypes = {
-  links: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string,
-      src: PropTypes.string
-    })
   )
 }
-
-export default Navbar;

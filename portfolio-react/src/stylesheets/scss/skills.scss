@@ -1,0 +1,10 @@
+@import './colors';
+
+main {
+  display: flex;
+  position: relative;
+  overflow-x: hidden;
+  min-height: calc(100vh - 65px);
+  background-color: $pale;
+  justify-content: center;
+}

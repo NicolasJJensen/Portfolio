@@ -1,5 +1,5 @@
 import React from 'react';
-import '../stylesheets/badge.css'
+import '../stylesheets/css/badge.css'
 
 export default function Badge(props) {
   return (
