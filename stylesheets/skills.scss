@@ -13,6 +13,18 @@ $maxSize: 100vw;
   position: absolute;
   background-color: $code;
   clip-path: circle(0% at 0 0);
+  margin-top: 10px;
+  line-height: 1.5rem;
+
+  .backButton {
+    position: absolute;
+    z-index: 3;
+    left: 5vw;
+    top: 20px;
+    color: $pale;
+    font-size: 20px;
+    font-weight: 200;
+  }
 
   .titleBar {
     display: flex;
@@ -56,15 +68,21 @@ $maxSize: 100vw;
   .info {
     transition: opacity 0.5s;
     opacity: 0;
-    padding-left: 5vw;
+    padding: 0 5vw;
 
     section {
-      margin: 3rem 0;
+      margin: 2rem 0;
       color: white;
 
       h2 {
         font-size: 23px;
         font-weight: 200;
+        margin-bottom: 5px;
+      }
+
+      p {
+        opacity: 0.7;
+        font-weight: 100;
       }
     }
 
@@ -112,7 +130,6 @@ main {
       }
 
       &:hover {
-
         & > .main {
           transition: box-shadow 0.2s;
           box-shadow: 0px 0px 25px -5px rgba(0,0,0,1);

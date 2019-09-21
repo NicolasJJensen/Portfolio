@@ -5,6 +5,18 @@
   background-color: #1C2238;
   -webkit-clip-path: circle(0% at 0 0);
           clip-path: circle(0% at 0 0);
+  margin-top: 10px;
+  line-height: 1.5rem;
+}
+
+.infoBox .backButton {
+  position: absolute;
+  z-index: 3;
+  left: 5vw;
+  top: 20px;
+  color: #FFF4EC;
+  font-size: 20px;
+  font-weight: 200;
 }
 
 .infoBox .titleBar {
@@ -60,17 +72,23 @@
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
   opacity: 0;
-  padding-left: 5vw;
+  padding: 0 5vw;
 }
 
 .infoBox .info section {
-  margin: 3rem 0;
+  margin: 2rem 0;
   color: white;
 }
 
 .infoBox .info section h2 {
   font-size: 23px;
   font-weight: 200;
+  margin-bottom: 5px;
+}
+
+.infoBox .info section p {
+  opacity: 0.7;
+  font-weight: 100;
 }
 
 .infoBox .info.show {

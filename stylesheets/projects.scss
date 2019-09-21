@@ -40,7 +40,7 @@ main {
     position: sticky;
     top: -80px;
     box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.2);
-    padding: 10px 40px;
+    padding: 10px calc(50vw - 150px);
     margin: 30px auto;
     display: flex;
     justify-content: space-between;

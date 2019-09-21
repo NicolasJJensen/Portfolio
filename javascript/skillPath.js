@@ -17,7 +17,7 @@ var moveImg = (resolve, interval, elem, x1, y1, count) => {
     resolve()
   }
   elem.style.left = `${x1 - (x1 - (window.innerWidth/2 - elem.getBoundingClientRect().width/2))*easing(count / max)}px`
-  elem.style.transform = `scale(${(count/max) + 1})`
+  elem.style.transform = `scale(${easing(count/max) + 1})`
   elem.style.top = `${y1 - (y1 - 0)*easing(count / max)}px`
 }
 
@@ -63,6 +63,18 @@ async function animation(skill) {
   .then(() => textAnimations(skill, infoImg))
 }
 
+function setupSkillInfo(skill) {
+  var techName = document.querySelectorAll(".technology")
+  var techDesc = document.querySelector(".technologyDescription")
+  var expDesc = document.querySelector(".experienceDescription")
+  var preWork = document.querySelector(".previousWorkDisplay")
+
+  techName.forEach(tech => tech.textContent = skill.firstChild.alt)
+  techDesc.textContent = 'This technology was created in (xxxx) by (random corporation) for (some weird af reason). It\'s a good technology for various reasons, mainly because I use it'
+  expDesc.textContent = 'I have used this technology for (x) years\nIt was used when I worked at \n(some job)\n(some other job)\netc'
+
+}
+
 // function to make text appear on screen correctly
 async function textAnimations(skill, img) {
 
@@ -92,7 +104,19 @@ async function textAnimations(skill, img) {
 
   await sleep(200)
 
+  setupSkillInfo(skill)
+
   document.querySelector(".info").classList.add("show")
+}
+
+function hover(skill) {
+  var main = document.querySelector(".main p")
+  main.textContent = skill.firstChild.alt
+}
+
+function hoverOut(skill) {
+  var main = document.querySelector(".main p")
+  main.textContent = "Programming"
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
@@ -101,5 +125,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   skillButton.forEach(skill => {
     skill.addEventListener("click", () => animation(skill))
+    skill.addEventListener("mouseenter", () => hover(skill))
+    skill.addEventListener("mouseleave", () => hoverOut(skill))
   })
+
+  document.querySelector(".backButton").addEventListener("click", () => location.reload())
 })

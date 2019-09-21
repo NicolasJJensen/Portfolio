@@ -25,6 +25,7 @@ nav {
   }
 
   .navLinks {
+    opacity: 0.95;
     display: flex;
     background-color: $code;
     justify-content: space-around;
@@ -37,7 +38,8 @@ nav {
         color: $pale;
         text-decoration: none;
         letter-spacing: 3px;
-        font-size: 14px;
+        font-size: 15px;
+        font-weight: 300;
       }
     }
   }
@@ -83,6 +85,10 @@ nav {
       &.fadeIn {
         opacity: 0;
         animation: navLinksFade 0.5s ease-in-out forwards;
+      }
+
+      a{
+        font-size: 25px;
       }
     }
 
