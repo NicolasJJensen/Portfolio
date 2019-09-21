@@ -23,7 +23,6 @@ export default function SkillWheel(props) {
       <button className="wheelTitle"
         onMouseEnter={() => setMainHover(true)}
         onClick={() => setShowSkills(true)}
-        onBlur={() => setShowSkills(false)}
       >
         <p>Programming</p>
       </button>

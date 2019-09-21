@@ -7,6 +7,7 @@ export default function Article(props) {
   return (
     <article>
       <h2>{props.title}</h2>
+      <p class="date" >{props.date}</p>
 
       <br />
       <hr class="articleHR" />

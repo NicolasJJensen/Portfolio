@@ -9,6 +9,7 @@ export default function Blog(props) {
   const articles = [
     {
       title: "Blog 1",
+      date: "21st Jan 2019",
       sections: [
         {
           title: "This is a creative title",
@@ -30,6 +31,7 @@ export default function Blog(props) {
     },
     {
       title: "Blog 2",
+      date: "15th Feb 2019",
       sections: [
         {
           title: "This is a creative title",
@@ -47,6 +49,7 @@ export default function Blog(props) {
     },
     {
       title: "Blog 3",
+      date: "21st Apr 2019",
       sections: [
         {
           title: "This is a creative title",
@@ -71,6 +74,7 @@ export default function Blog(props) {
       ]
     },
     {
+      date: "18th May 2019",
       title: "Blog 4",
       sections: [
         {
@@ -89,6 +93,7 @@ export default function Blog(props) {
     },
     {
       title: "Blog 5",
+      date: "19th Aug 2019",
       sections: [
         {
           title: "This is a creative title",
@@ -109,7 +114,7 @@ export default function Blog(props) {
         <h1>My Blog</h1>
         <br />
         <hr />
-        {articles.map(article => <Article title={article.title} sections={article.sections}/> )}
+        {articles.map(article => <Article title={article.title} date={article.date} sections={article.sections}/> )}
       </div>
     </main>
   )
