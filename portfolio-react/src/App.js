@@ -6,6 +6,7 @@ import Home from './Home';
 import Skills from './Skills';
 
 import Projects from './Projects';
+import Blog from './Blog';
 
 export default function App() {
 
@@ -15,7 +16,7 @@ export default function App() {
       <Route path="/" exact component={Home} />
       <Route path="/skills" component={Skills} />
       <Route path="/projects" component={Projects} />
-      {/* <Route path="/blog" component={Blog} /> */}
+      <Route path="/blog" component={Blog} />
       {/* <Route path="/about" component={About} /> */}
     </Router>
   )

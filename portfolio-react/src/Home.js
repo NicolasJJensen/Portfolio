@@ -44,6 +44,10 @@ export default function Home() {
       src: '/projects'
     },
     {
+      name: 'Blog',
+      src: '/blog'
+    },
+    {
       name: 'About',
       src: '/about'
     }
@@ -106,14 +110,6 @@ export default function Home() {
           </li>
         ))}
       </ul>
-
-      {/* <div className="menu">
-        <p><Link src="skills.html">Skills</Link></p>
-        <p><Link src="experience.html">Experience</Link></p>
-        <p><Link src="projects.html">Projects</Link></p>
-        <p><Link src="goals.html">Goals</Link></p>
-        <p><Link src="contact.html">Contact</Link></p>
-      </div> */}
     </main>
   )
 }

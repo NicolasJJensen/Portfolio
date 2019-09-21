@@ -25,8 +25,12 @@ export default function Navbar() {
       src: '/projects'
     },
     {
-      name: 'About',
-      src: '/about'
+      name: 'Blog',
+      src: '/blog'
+    },
+    {
+      name: 'Contact',
+      src: '/contact'
     }
   ]
 

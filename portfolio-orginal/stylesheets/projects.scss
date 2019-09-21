@@ -64,24 +64,4 @@ main {
     z-index: 0;
     background-color: $pale;
   }
-
-  & .frame {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    width: fit-content;
-    padding-bottom: 30px;
-
-    & > p {
-      width: fit-content;
-      padding: 10px 0;
-    }
-
-    & > .img {
-      display: inline-block;
-      background-color: rgba(0, 0, 0, 0.1);
-      width: 300px;
-      height: 300px;
-    }
-  }
 }
