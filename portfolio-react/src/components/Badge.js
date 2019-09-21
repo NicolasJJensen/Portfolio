@@ -3,11 +3,11 @@ import '../stylesheets/css/badge.css'
 
 export default function Badge(props) {
   return (
-    <div class="myBadge">
-      <div class="badge">
-        <img src="http://lorempixel.com/100/100" />
-        <div class="information">
-          <p class="name">Nicolas Jensen</p>
+    <div className="myBadge">
+      <div className="badge">
+        <img src="http://lorempixel.com/100/100" alt="profile pic"/>
+        <div className="information">
+          <p className="name">Nicolas Jensen</p>
           <p>Developer</p>
         </div>
       </div>

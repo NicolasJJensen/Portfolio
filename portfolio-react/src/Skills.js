@@ -1,6 +1,5 @@
 import React, {Fragment, useState} from 'react';
 
-import Navbar from './components/Navbar';
 import SkillWheel from './components/SkillWheel';
 import SkillInfo from './components/SkillInfo';
 
@@ -71,8 +70,7 @@ export default function Skills(props) {
 
   return (
     <Fragment>
-      <Navbar />
-      <main class="skills">
+      <main className="skills">
         <SkillWheel skills={programming} skillClicked={skillClicked} />
         <SkillInfo skill={skill && skill.info} imgRect={skill && skill.imgRect} render={skill && skill.render} />
       </main>

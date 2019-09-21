@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { BrowserRouter as Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 
 import '../stylesheets/css/nav.css'
 
@@ -10,7 +10,7 @@ export default function Navbar() {
   const links = [
     {
       name: 'Home',
-      src: '/index.html'
+      src: '/'
     },
     {
       name: 'Skills',
@@ -25,24 +25,24 @@ export default function Navbar() {
       src: '/projects'
     },
     {
-      name: 'About Me',
+      name: 'About',
       src: '/about'
     }
   ]
 
   return (
-    <nav class="navBar">
-      <div class="logo">
+    <nav className="navBar">
+      <div className="logo">
         <h4>Nicolas Jensen</h4>
       </div>
-      <ul class={active ? 'navLinks navActive' : 'navLinks'}>
+      <ul className={active ? 'navLinks navActive' : 'navLinks'}>
         {links.map(link => (
-          <li class={active ? 'fadeIn' : ''}>
-            <Link to={link.src}>{link.name}</Link>
+          <li key={link.src} className={active ? 'fadeIn' : ''}>
+            <Link onClick={() => setActive(!active)} to={link.src}>{link.name}</Link>
           </li>
         ))}
       </ul>
-      <button class={active ? 'burger toggle' : 'burger'} onClick={() => setActive(!active)}>
+      <button aria-label="navigation menu" className={active ? 'burger toggle' : 'burger'} onClick={() => setActive(!active)}>
         <div></div>
         <div></div>
         <div></div>

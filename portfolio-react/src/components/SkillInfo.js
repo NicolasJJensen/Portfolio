@@ -20,7 +20,7 @@ export default function SkillInfo(props) {
       setImgPosAnim (`
         @keyframes imgPosAnim {
           0% {
-            top: ${props.imgRect.top - props.imgRect.height}px;
+            top: ${props.imgRect.top - 0.65*props.imgRect.height}px;
             left: ${props.imgRect.left}px;
             transform: scale(1) translateX(0%);
           } 100% {
@@ -39,18 +39,18 @@ export default function SkillInfo(props) {
         {clipAnim}
         {imgPosAnim}
       </style>
-      <div class="infoBox" style={{animation: "clipAnimation 1s forwards"}}>
+      <div className="infoBox" style={{animation: "clipAnimation 1s forwards"}}>
         {render && (
           <Fragment>
-            <button class="backButton" onClick={() => {
+            <button className="backButton" onClick={() => {
               setRender(false)
               setClipAnim(null)
               setImgPosAnim(null)
             }}>
               BACK
             </button>
-            <div class="titleBar" style={{height: `calc(${props.imgRect.height * 2}px + 2em)`}}>
-              <img class="infoImg"
+            <div className="titleBar" style={{height: `calc(${props.imgRect.height * 2}px + 2em)`}}>
+              <img className="infoImg"
                 src={props.skill.src}
                 alt={props.skill.name}
                 style={{
@@ -59,24 +59,24 @@ export default function SkillInfo(props) {
                   height: `${props.imgRect.height}px`
                 }}
               />
-              <div class="infoTitleContainer">
-                <h1 class="infoTitle moveUp">{props.skill.name}</h1>
+              <div className="infoTitleContainer">
+                <h1 className="infoTitle moveUp">{props.skill.name}</h1>
               </div>
             </div>
 
-            <div class="infoBreak displayLine"></div>
+            <div className="infoBreak displayLine"></div>
 
-            <div class="info fadeIn">
+            <div className="info fadeIn">
               <section>
-                <p class="technologyDescription">{props.skill.description}</p>
+                <p className="technologyDescription">{props.skill.description}</p>
               </section>
-              <section class="experience">
-                <h2>Experience With <span class="technology">{props.skill.name}</span>:</h2>
-                <p class="experienceDescription">{props.skill.experience}</p>
+              <section className="experience">
+                <h2>Experience With <span className="technology">{props.skill.name}</span>:</h2>
+                <p className="experienceDescription">{props.skill.experience}</p>
               </section>
-              <section class="previousWork">
-                <h2>Projects Using <span class="technology">{props.skill.name}</span>:</h2>
-                <div class="previousWorkDisplay">
+              <section className="previousWork">
+                <h2>Projects Using <span className="technology">{props.skill.name}</span>:</h2>
+                <div className="previousWorkDisplay">
 
                 </div>
               </section>

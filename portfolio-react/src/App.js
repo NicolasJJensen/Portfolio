@@ -10,8 +10,8 @@ export default function App() {
   return (
     <Router>
       <Navbar />
-      <Route path="/index.html" component={Home} />
-      <Route path="/skills.html" component={Skills} />
+      <Route path="/" exact component={Home} />
+      <Route path="/skills" component={Skills} />
       {/* <Route path="/experience" component={Experience} />
       <Route path="/projects" component={Projects} />
       <Route path="/blog" component={Blog} />

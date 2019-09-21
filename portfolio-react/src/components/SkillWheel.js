@@ -1,5 +1,4 @@
-import React, {Fragment, useState, useRef} from 'react';
-import ReactDOM from 'react-dom';
+import React, {useState, useRef} from 'react';
 
 import '../stylesheets/css/skillWheel.css'
 
@@ -20,8 +19,8 @@ export default function SkillWheel(props) {
   }
 
   return (
-    <div class="skillWheel">
-      <button class="wheelTitle"
+    <div className="skillWheel">
+      <button className="wheelTitle"
         onMouseEnter={() => setMainHover(true)}
         onMouseLeave={() => setMainHover(false)}
         onClick={() => setShowSkills(true)}
@@ -29,15 +28,15 @@ export default function SkillWheel(props) {
         <p>Programming</p>
       </button>
 
-      <ul class="allSkills">
+      <ul className="allSkills">
         {props.skills.map((skill, i) => (
-          <li class="skill">
+          <li key={skill.name} className="skill">
             <button
               onMouseEnter={() => setSkillHover(i)}
               onMouseLeave={() => setSkillHover(i)}
               onClick={() => skillClicked(i)}
             >
-              <img ref={refs.current[i]} class="skillImg" src={skill.src} alt={skill.name} />
+              <img ref={refs.current[i]} className="skillImg" src={skill.src} alt={skill.name} />
             </button>
           </li>
         ))}

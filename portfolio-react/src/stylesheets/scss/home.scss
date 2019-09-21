@@ -50,7 +50,6 @@ main.home {
   position: relative;
   top: calc(100vh - #{$badgeHeight*0.85 + 'px'});
   z-index: 1;
-  background-color: $peach;
 }
 
 .menu {
@@ -70,26 +69,17 @@ main.home {
     text-decoration: none;
   }
 
-  & p {
+  & li {
     padding: 20px;
     font-size: 40px;
     opacity: 0;
-    transform: translateX(400px);
+    transform: translateX(200px);
+    list-style: none;
 
-    &.slideIn {
-      animation: slide-in 0.7s;
+    &.fadeIn {
+      transition: all 0.7s;
       opacity: 1;
       transform: translateX(0px);
     }
-  }
-}
-
-@keyframes slide-in {
-  from{
-    opacity: 0;
-    transform: translateX(150px);
-  } to {
-    opacity: 1;
-    transform: translateX(0px);
   }
 }
