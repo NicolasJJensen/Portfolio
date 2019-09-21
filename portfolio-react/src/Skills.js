@@ -66,13 +66,17 @@ export default function Skills(props) {
     })
   }
 
+  var returned = () => {
+    setSkill()
+  }
+
   const [skill, setSkill] = useState(null)
 
   return (
     <Fragment>
       <main className="skills">
         <SkillWheel skills={programming} skillClicked={skillClicked} />
-        <SkillInfo skill={skill && skill.info} imgRect={skill && skill.imgRect} render={skill && skill.render} />
+        <SkillInfo skill={skill && skill.info} imgRect={skill && skill.imgRect} render={skill && skill.render} back={returned}/>
       </main>
     </Fragment>
   )

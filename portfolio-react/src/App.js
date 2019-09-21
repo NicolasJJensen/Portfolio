@@ -5,6 +5,8 @@ import Navbar from './components/Navbar';
 import Home from './Home';
 import Skills from './Skills';
 
+import Projects from './Projects';
+
 export default function App() {
 
   return (
@@ -12,10 +14,9 @@ export default function App() {
       <Navbar />
       <Route path="/" exact component={Home} />
       <Route path="/skills" component={Skills} />
-      {/* <Route path="/experience" component={Experience} />
       <Route path="/projects" component={Projects} />
-      <Route path="/blog" component={Blog} />
-      <Route path="/about" component={About} /> */}
+      {/* <Route path="/blog" component={Blog} /> */}
+      {/* <Route path="/about" component={About} /> */}
     </Router>
   )
 }

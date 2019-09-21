@@ -30,7 +30,7 @@ main {
       transition: box-shadow 0.2s;
     }
 
-    &:hover {
+    &.show {
       & > .main {
         transition: box-shadow 0.2s;
         box-shadow: 0px 0px 25px -5px rgba(0,0,0,1);
@@ -43,7 +43,7 @@ main {
           }
         }
 
-        &:hover {
+        &.show {
           transition: box-shadow 0.2s;
           box-shadow: 0px 0px 15px -4px rgba(0,0,0,1);
         }

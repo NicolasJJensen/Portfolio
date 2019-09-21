@@ -46,6 +46,7 @@ export default function SkillInfo(props) {
               setRender(false)
               setClipAnim(null)
               setImgPosAnim(null)
+              props.back()
             }}>
               BACK
             </button>

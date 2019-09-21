@@ -17,6 +17,14 @@ main.home {
   justify-content: center;
   flex-direction: column;
 
+  .myBadge {
+    transform: none;
+    position: relative;
+    top: calc(100vh - #{$badgeHeight*0.85 + 'px'});
+    z-index: 1;
+    background-color: $dark-peach;
+  }
+
   & > .introduction {
     position: absolute;
     left: 50%;
@@ -44,12 +52,6 @@ main.home {
       color: $yellow;
     }
   }
-}
-
-.myBadge {
-  position: relative;
-  top: calc(100vh - #{$badgeHeight*0.85 + 'px'});
-  z-index: 1;
 }
 
 .menu {
