@@ -1,0 +1,93 @@
+@import './colors';
+@import './badgeSize';
+$navHeight: 64;
+
+body {
+  background-color: $code;
+  height: calc(200vh - #{$badgeHeight + 'px'});
+}
+
+main {
+  position: relative;
+  width: 100vw;
+  height: calc(100vh);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  & > .introduction {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    font-weight: 200;
+    color: $pale;
+  
+    & > * {
+      text-align: center;
+    }
+  
+    & > .mainIntro {
+      font-size: 25px;
+    }
+  
+    & > .jobDescription {
+      font-size: 22px;
+    }
+  
+    & .jobTitle {
+      color: $peach;
+    }
+  
+    & .name {
+      color: $yellow;
+    }
+  }
+}
+
+.myBadge {
+  position: relative;
+  top: calc(100vh - #{$badgeHeight*0.85 + 'px'});
+  z-index: 1;
+  background-color: $peach;
+}
+
+.menu {
+  position: relative;
+  top: calc(100vh - #{$badgeHeight*0.7+ 'px'});
+  min-height: calc(100vh - #{$navHeight + 'px'});
+  padding-top: calc(#{$badgeHeight*0.85 + 'px'});
+  transform: translateY(#{-$badgeHeight + 'px'});
+  background-color: $pale;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+
+  & a {
+    color: $paleText;
+    text-decoration: none;
+  }
+
+  & p {
+    padding: 20px;
+    font-size: 40px;
+    opacity: 0;
+    transform: translateX(400px);
+
+    &.slideIn {
+      animation: slide-in 0.7s;
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+}
+
+@keyframes slide-in {
+  from{
+    opacity: 0;
+    transform: translateX(150px);
+  } to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
