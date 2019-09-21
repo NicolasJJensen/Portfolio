@@ -20,9 +20,9 @@ export default function SkillInfo(props) {
       setImgPosAnim (`
         @keyframes imgPosAnim {
           0% {
-            top: ${props.imgRect.top - 0.65*props.imgRect.height}px;
+            top: ${props.imgRect.top - 0.8*props.imgRect.height}px;
             left: ${props.imgRect.left}px;
-            transform: scale(1) translateX(0%);
+            transform: scale(1.1) translateX(0%);
           } 100% {
             top: 0px;
             left: 50%;

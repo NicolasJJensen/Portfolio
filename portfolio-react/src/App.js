@@ -7,6 +7,7 @@ import Skills from './Skills';
 
 import Projects from './Projects';
 import Blog from './Blog';
+import Contact from './Contact';
 
 export default function App() {
 
@@ -17,7 +18,7 @@ export default function App() {
       <Route path="/skills" component={Skills} />
       <Route path="/projects" component={Projects} />
       <Route path="/blog" component={Blog} />
-      {/* <Route path="/about" component={About} /> */}
+      <Route path="/contact" component={Contact} />
     </Router>
   )
 }

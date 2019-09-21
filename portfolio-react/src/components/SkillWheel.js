@@ -23,6 +23,7 @@ export default function SkillWheel(props) {
       <button className="wheelTitle"
         onMouseEnter={() => setMainHover(true)}
         onClick={() => setShowSkills(true)}
+        onBlur={() => setShowSkills(false)}
       >
         <p>Programming</p>
       </button>
@@ -32,7 +33,7 @@ export default function SkillWheel(props) {
           <li key={skill.name} className={`skill ${i === skillHover ? 'show': ''}`}>
             <button
               onMouseEnter={() => setSkillHover(i)}
-              onMouseLeave={() => setSkillHover(i)}
+              onMouseLeave={() => setSkillHover(-1)}
               onClick={() => skillClicked(i)}
             >
               <img ref={refs.current[i]} className="skillImg" src={skill.src} alt={skill.name} />

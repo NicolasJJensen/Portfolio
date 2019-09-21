@@ -48,8 +48,8 @@ export default function Home() {
       src: '/blog'
     },
     {
-      name: 'About',
-      src: '/about'
+      name: 'Contact',
+      src: '/contact'
     }
   ]
 
