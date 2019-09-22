@@ -13,6 +13,7 @@
     padding: #{($badgeHeight - $imgSize)/2 + 'px 0'};
 
     & > img {
+      background-color: lightgray;
       margin-right: 20px;
       width: #{$imgSize + 'px'};
       height: #{$imgSize + 'px'};
