@@ -68,7 +68,7 @@ main.home {
   position: relative;
   top: calc(100vh - #{$badgeHeight*0.7+ 'px'});
   min-height: calc(100vh - #{$navHeight + 'px'});
-  padding-top: calc(#{$badgeHeight*0.85 + 'px'});
+  margin-top: calc(#{$badgeHeight*0.7 + 'px'});
   transform: translateY(#{-$badgeHeight + 'px'});
   background-color: $pale;
   display: flex;
