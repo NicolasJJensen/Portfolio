@@ -8,14 +8,15 @@ $mainOffset: calc(0% + #{$badgeHeight*0.15 + 'px'});
 // custom styling for the badge
 .myBadge {
   position: fixed;
-  width: 100%;
+  width: 100vw;
+  transform: translateY(-27px);
   z-index: 1;
   background-color: $code;
-  transform: translateY(#{-$badgeHeight*0.15 + 'px'});
 }
 
 // styling for the main content fo the projects page
 main.projects {
+  overflow: hidden;
   position: relative;
   padding-top: 65px;
   z-index: 2;

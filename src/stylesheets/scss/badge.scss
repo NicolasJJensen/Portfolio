@@ -37,3 +37,13 @@
     }
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .myBadge {
+    width: 100vw;
+
+    & > .badge > .information {
+      font-size: 20px;
+    }
+  }
+}

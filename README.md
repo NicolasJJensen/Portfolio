@@ -1,68 +1,140 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Visit the site at
 
-## Available Scripts
+[Nicolas Jensen Portfolio](https://nicolas-jensen-portfolio.herokuapp.com/)
 
-In the project directory, you can run:
+## The Github repo can be found at
+[Github source code](https://github.com/NicolasJJensen/Portfolio)
 
-### `npm start`
+### Purpose
+The purpose of this website was to create a portfolio, to show previous work, how to best contact me, my skills and what I'm capable of, as well as practise my web development skills.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+### Functionality and Notable Features
+The website itself was programmed with accessability in mind, therefore it is able to be navigated using on a keyboard, or a screen reader as descriptions and semantic tags were used to make navigation as easy and understandable as possible
 
-### `npm test`
+### Sitemap
+![siteMap](https://raw.githubusercontent.com/NicolasJJensen/Portfolio/master/docs/siteMap.png  "siteMap")
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Screenshots
 
-### `npm run build`
+## Home
+<details>
+  <summary>
+    On Desktop:
+  </summary>
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  ![homePC1](https://raw.githubusercontent.com/NicolasJJensen/Portfolio/master/docs/home/homePC1.png  "homePC1")
+  ![homePC2](https://raw.githubusercontent.com/NicolasJJensen/Portfolio/master/docs/home/homePC2.png  "homePC2")
+  ![homePC3](https://raw.githubusercontent.com/NicolasJJensen/Portfolio/master/docs/home/homePC3.png  "homePC3")
+</details>
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+<details>
+  <summary>
+    On Mobile:
+  </summary>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  ![homePhone1](https://raw.githubusercontent.com/NicolasJJensen/Portfolio/master/docs/home/homePhone1.png  "homePhone1")
+  ![homePhone2](https://raw.githubusercontent.com/NicolasJJensen/Portfolio/master/docs/home/homePhone2.png  "homePhone2")
+  ![homePhone3](https://raw.githubusercontent.com/NicolasJJensen/Portfolio/master/docs/home/homePhone3.png  "homePhone3")
+</details>
 
-### `npm run eject`
+## Skills
+<details>
+  <summary>
+    On Desktop:
+  </summary>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+  ![skillsPC1](https://raw.githubusercontent.com/NicolasJJensen/Portfolio/master/docs/skills/skillsPC1.png  "skillsPC1")
+  ![skillsPC2](https://raw.githubusercontent.com/NicolasJJensen/Portfolio/master/docs/skills/skillsPC2.png  "skillsPC2")
+  ![skillsPC3](https://raw.githubusercontent.com/NicolasJJensen/Portfolio/master/docs/skills/skillsPC3.png  "skillsPC3")
+</details>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<details>
+  <summary>
+    On Mobile:
+  </summary>
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+  ![skillsPhone1](https://raw.githubusercontent.com/NicolasJJensen/Portfolio/master/docs/skills/skillsPhone1.png  "skillsPhone1")
+  ![skillsPhone2](https://raw.githubusercontent.com/NicolasJJensen/Portfolio/master/docs/skills/skillsPhone2.png  "skillsPhone2")
+  ![skillsPhone3](https://raw.githubusercontent.com/NicolasJJensen/Portfolio/master/docs/skills/skillsPhone3.png  "skillsPhone3")
+</details>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Experience
+<details>
+  <summary>
+    On Desktop:
+  </summary>
 
-## Learn More
+  ![experiencePC1](https://raw.githubusercontent.com/NicolasJJensen/Portfolio/master/docs/experience/experiencePC1.png  "experiencePC1")
+</details>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<details>
+  <summary>
+    On Mobile:
+  </summary>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  ![experiencePhone1](https://raw.githubusercontent.com/NicolasJJensen/Portfolio/master/docs/experience/experiencePhone1.png  "experiencePhone1")
+  ![experiencePhone2](https://raw.githubusercontent.com/NicolasJJensen/Portfolio/master/docs/experience/experiencePhone2.png  "experiencePhone2")
+</details>
 
-### Code Splitting
+## Projects
+<details>
+  <summary>
+    On Desktop:
+  </summary>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+  ![projectsPC1](https://raw.githubusercontent.com/NicolasJJensen/Portfolio/master/docs/projects/projectsPC1.png  "projectsPC1")
+</details>
 
-### Analyzing the Bundle Size
+<details>
+  <summary>
+    On Mobile:
+  </summary>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+  ![projectsPhone1](https://raw.githubusercontent.com/NicolasJJensen/Portfolio/master/docs/projects/projectsPhone1.png  "projectsPhone1")
+</details>
 
-### Making a Progressive Web App
+## Blog
+<details>
+  <summary>
+    On Desktop:
+  </summary>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+  ![blogPC1](https://raw.githubusercontent.com/NicolasJJensen/Portfolio/master/docs/blog/blogPC1.png  "blogPC1")
+  ![blogPC2](https://raw.githubusercontent.com/NicolasJJensen/Portfolio/master/docs/blog/blogPC2.png  "blogPC2")
+</details>
 
-### Advanced Configuration
+<details>
+  <summary>
+    On Mobile:
+  </summary>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+  ![blogPhone1](https://raw.githubusercontent.com/NicolasJJensen/Portfolio/master/docs/blog/blogPhone1.png  "blogPhone1")
+</details>
 
-### Deployment
+## Contact
+<details>
+  <summary>
+    On Desktop:
+  </summary>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+  ![contactPC1](https://raw.githubusercontent.com/NicolasJJensen/Portfolio/master/docs/contact/contactPC1.png  "contactPC1")
+</details>
 
-### `npm run build` fails to minify
+<details>
+  <summary>
+    On Mobile:
+  </summary>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+  ![contactPhone1](https://raw.githubusercontent.com/NicolasJJensen/Portfolio/master/docs/contact/contactPhone1.png  "contactPhone1")
+</details>
+
+### Target Audience
+The targete audience for the website is anyone looking to hire me or see what I am capabale of, or what work work I have previously done.
+
+### Tech Stack
+the tech stack of this application was:
+* HTML (Main layout structure)
+* SCSS (For styling and animations)
+* React (To make the code re-useable responsive and DRY)
+* Heroku (For deployment online)
