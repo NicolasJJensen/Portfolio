@@ -1,17 +1,20 @@
 @import './badgeSize';
 @import './colors';
 
+// the badge container
 .myBadge {
   display: flex;
   justify-content: center;
   clip-path: polygon(100% 15%, 100% 100%, 50% 85%, 0 100%, 0 15%, 50% 0);
   background-color: $dark_peach;
 
+  // the inner container
   & > .badge {
     display: flex;
     align-items: center;
     padding: #{($badgeHeight - $imgSize)/2 + 'px 0'};
 
+    // the profile picture that is dispalyed
     & > img {
       background-color: lightgray;
       margin-right: 20px;
@@ -21,11 +24,13 @@
       border: 3px solid white;
     }
   
+    // container for my name and title
     & > .information {
       display: inline-block;
       color: $yellow;
       font-size: 28px;
 
+      // name bolder than title
       & > .name {
         font-weight: 400;
       }

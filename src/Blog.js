@@ -1,11 +1,24 @@
-import React, {useState} from 'react';
+import React from 'react';
 
+//the stylesheet for the blog page
 import './stylesheets/css/blog.css'
+
+// the badge and article components that needs to be displayed
 import Badge from './components/Badge';
 import Article from './components/Article';
 
-export default function Blog(props) {
+// the functional componetn for the Blog webpage that displays a list of blogs
+// for a user to read through
+export default function Blog() {
 
+  // this is a list with information of every article to be dispalyed
+  // each article contains:
+  //   title
+  //   date
+  //   an array of sections which contain
+  //     title
+  //     img
+  //     body
   const articles = [
     {
       title: "Blog 1",
@@ -107,13 +120,23 @@ export default function Blog(props) {
     }
   ]
 
+  // the code to render the article page
   return (
+
+    // a main tag for semantics and ease of use
     <main class="blog">
+
+      {/* my badge which is fixed to the top of the screen */}
       <Badge />
+
+      {/* a container for the name of my blog and all its published articles */}
       <div class="articles">
         <h1>My Blog</h1>
         <br />
         <hr />
+        
+        {/* the list of articles is looped through and the article component is rendered
+        with the correct data for each item in the array */}
         {articles.map(article => <Article title={article.title} date={article.date} sections={article.sections}/> )}
       </div>
     </main>

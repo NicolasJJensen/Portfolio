@@ -3,6 +3,9 @@
 
 $mainOffset: calc(0% + #{$badgeHeight*0.15 + 'px'});
 
+// styling for the projects page
+
+// custom styling for the badge
 .myBadge {
   position: fixed;
   width: 100%;
@@ -11,6 +14,7 @@ $mainOffset: calc(0% + #{$badgeHeight*0.15 + 'px'});
   transform: translateY(#{-$badgeHeight*0.15 + 'px'});
 }
 
+// styling for the main content fo the projects page
 main.projects {
   position: relative;
   padding-top: 65px;
@@ -20,16 +24,19 @@ main.projects {
   transform: translateY(#{$badgeHeight*0.7 + 'px'});
   clip-path: polygon(50% 0, 100% $mainOffset, 100% 100%, 0% 100%, 0% $mainOffset);
 
+  // set the color of all items directly below main
   & > * {
     background-color: $pale;
   }
 
+  // the main title of the page
   & > .heading {
     text-align: center;
     font-size: 40px;
     font-weight: 400;
   }
 
+  // the different types of projects (only 2)
   & > .options {
     z-index: 2;
     position: sticky;
@@ -41,22 +48,26 @@ main.projects {
     display: flex;
     justify-content: space-between;
 
+    // all items inside
     & > * {
       cursor: pointer;
       font-size: 25px;
     }
   }
 
+  // the work projects are moved up to be on top of the personal ones
   & .work {
     transform: translateY(-100%);
   }
 
+  // the styling for both projects
   & .work, & .personal {
     position: relative;
     z-index: 0;
     background-color: $pale;
   }
 
+  // container containing the carousels
   .frames {
     display: relative;
     display: flex;

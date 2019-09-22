@@ -1,6 +1,7 @@
 @import './badgeSize';
 @import './colors';
 
+// styling for the main content of the contact page
 main.contact {
   display: flex;
   flex-direction: column;
@@ -9,17 +10,20 @@ main.contact {
   top: 65px;
   height: calc(100vh - 65px);
 
+  // custom styling for the badge on this page
   .myBadge{
     position: absolute;
     background-color: $dark_peach;
   }
 
+  // the call to action
   h2 {
     padding-top: calc(65px + 30vh);
     text-align: center;
     color: $peach;
   }
 
+  // a list of ways to contact me
   ul {
     height: 30vh;
 
@@ -28,6 +32,7 @@ main.contact {
       padding: 30px;
       list-style: none;
 
+      // the link to one of the avenues that I can be contacted on
       a {
         cursor: pointer;
         width: 70px;
@@ -42,12 +47,15 @@ main.contact {
         transform: scale(1);
         transition: all 0.3s;
 
+        // a small feedback animation on hover
         &:hover {
           box-shadow: 5px 5px 30px -10px black;
           transform: scale(1.1);
           transition: all 0.3s;
         }
-
+        
+        // the img to represent the mode of contact
+        //(github, email, etc)
         img {
           width: 50px;
           height: 50px;
@@ -57,9 +65,11 @@ main.contact {
   }
 }
 
+//styling for if the page is too small
 @media screen and (max-width: 550px) {
   main.contact {
     ul {
+      // display the means of contact in a grid
       height: 40vh;
       display: grid;
       

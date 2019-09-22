@@ -6,12 +6,16 @@ $littleSize: 20vw;
 $bigSize: 35vw;
 $maxSize: 90vw;
 
+// styling for the skillwheel comonent
+
 main.skills {
+  // the container containing the skill wheel
   & > .skillWheel {
     position: relative;
     height: #{$maxSize};
     width: #{$maxSize};
 
+    // the text for what type of skills are dispalyed
     & > .wheelTitle {
       width: #{$bigSize};
       height: #{$bigSize};
@@ -30,12 +34,14 @@ main.skills {
       transition: box-shadow 0.2s;
     }
 
+    // animation for when skills are being displayed
     &.show {
       & > .main {
         transition: box-shadow 0.2s;
         box-shadow: 0px 0px 25px -5px rgba(0,0,0,1);
       }
     
+      // animate the skill bubbles in but staggered based on their place around the circle
       & > .allSkills > .skill {
         @for $i from 1 through $programmingSkills {
           &:nth-child(#{$i}) {
@@ -43,10 +49,12 @@ main.skills {
           }
         }
 
+        // animation for hovering a skill
         &.show {
           transition: box-shadow 0.2s;
           box-shadow: 0px 0px 15px -4px rgba(0,0,0,1);
 
+          // the img of the skill
           img {
             transform: scale(1.2);
           }
@@ -54,6 +62,7 @@ main.skills {
       }
     }
 
+    // the ul containing all the skills
     & > .allSkills {
       transform-origin: 0 0;
       animation: rotate 120s linear infinite;
@@ -61,6 +70,7 @@ main.skills {
       top: 50%;
       left: 50%;
 
+      // the li (the skill container)
       & > .skill {
         width: #{$littleSize};
         height: #{$littleSize};
@@ -75,6 +85,7 @@ main.skills {
         cursor: pointer;
         transition: box-shadow 0.2s;
 
+        // using triganometry display the skills in a circle
         @for $i from 1 through $programmingSkills {
           &:nth-child(#{$i}) {
             top: calc(#{sin( pi() * 2 / $programmingSkills * ($i - 1)) * 0.5} * (#{$maxSize - $littleSize}) - #{$littleSize/2});
@@ -82,11 +93,14 @@ main.skills {
           }
         }
 
+        // button to clikc the skill
+        // animate it in reverse so it is always upright
         & > button {
           animation: rotate 120s linear infinite reverse;
           width: calc(0.7071 * #{$littleSize});
           height: calc(0.7071 * #{$littleSize});
 
+          // set the img height correctly
           & > img {
             width: inherit;
             height: inherit;
@@ -98,7 +112,7 @@ main.skills {
 }
 
 
-
+// animation to rotate in a circle
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -111,6 +125,7 @@ main.skills {
   }
 }
 
+// animation to display the hr
 @keyframes displayLine {
   from {
     transform: scaleX(0);
@@ -119,6 +134,7 @@ main.skills {
   }
 }
 
+// animation to expand the imgs
 @keyframes smallExpand {
   from {
     transform: scale(1);
@@ -127,6 +143,7 @@ main.skills {
   }
 }
 
+// animation to display each skill individually
 @keyframes expand {
   0% {
     transform: scale(0);
@@ -139,6 +156,7 @@ main.skills {
   }
 }
 
+// animation to increase size of image when animating to info
 @keyframes expandInfoImg {
   0% {
     transform: scale(1);
@@ -148,7 +166,11 @@ main.skills {
   }
 }
 
+// stylings that only apply is the width is larger than the height
 @media screen and (min-aspect-ratio:1/1) {
+
+  // all code changes the sizes so that the max size of the skill wheel
+  // is 90% of the height, this way it isn't too big
   $maxSize: 90vh;
   $littleSize: 20vh;
   $bigSize: 35vh;

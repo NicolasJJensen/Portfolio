@@ -4,6 +4,9 @@ $littleSize: 20vw;
 $bigSize: 35vw;
 $maxSize: 100vw;
 
+// the styling for the skills information component 
+
+// container taking up the whole screen
 .infoBox {
   min-height: calc(100vh - 65px);
   width: 100vw;
@@ -14,6 +17,7 @@ $maxSize: 100vw;
   transition: clip-path 1s;
   line-height: 1.5rem;
 
+  // button to return to skillwheel
   .backButton {
     position: absolute;
     z-index: 3;
@@ -24,27 +28,32 @@ $maxSize: 100vw;
     font-weight: 200;
   }
 
+  // container for skill img and name
   .titleBar {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
 
+    // skill img
     .infoImg {
       position: relative;
       width: calc(0.7071 * #{$littleSize});
       height: calc(0.7071 * #{$littleSize});
       transform-origin: 0 0;
 
+      // class to animate img size
       &.scaleImg {
         animation: scaleImg 1s ease-in-out forwards;
       }
     }
 
+    // container for title text so it can be smoothly animated from below the hr
     .infoTitleContainer {
       overflow: hidden;
       padding-bottom: 10px;
 
+      // title of information section
       .infoTitle {
         color: $pale;
         text-align: center;
@@ -55,6 +64,7 @@ $maxSize: 100vw;
     }
   }
 
+  // break between main icon and information section
   .infoBreak {
     margin: 3rem;
     border: 0.5px solid white;
@@ -64,27 +74,32 @@ $maxSize: 100vw;
     margin: 0 5vw;
     transform: scale(0);
 
+    // class to animate line in smoothly
     &.displayLine {
       animation: displayLine 0.2s ease-in-out forwards 1s;
     }
   }
 
+  // container with all information about me and that skill
   .info {
     transition: opacity 0.5s;
     opacity: 0;
     padding: 0 5vw;
     animation: textFade 0.5s 1.4s forwards;
 
+    // a section of information
     section {
       margin: 2rem 0;
       color: white;
 
+      // the title for that information
       h2 {
         font-size: 23px;
         font-weight: 200;
         margin-bottom: 5px;
       }
 
+      // the information itself
       p {
         opacity: 0.7;
         font-weight: 100;
@@ -93,17 +108,22 @@ $maxSize: 100vw;
   }
 }
 
+// code for smaller screens
+// instead of check width, instead it checks it the screen has less height than width
+// allowing better styling
 @media screen and (min-aspect-ratio:1/1) {
   $maxSize: 80vh;
   $littleSize: 15vh;
   $bigSize: 30vh;
 
+  // img styled to different size on longer screens
   .infoBox > .titleBar > .infoImg {
     width: calc(0.7071 * #{$littleSize});
     height: calc(0.7071 * #{$littleSize});
   }
 }
 
+// animation to move the title text up
 @keyframes moveUp {
   0% {
     top: calc(1em + 10px);
@@ -112,6 +132,7 @@ $maxSize: 100vw;
   }
 }
 
+// aniamtion to fade text in
 @keyframes textFade {
   0% {
     opacity: 0;

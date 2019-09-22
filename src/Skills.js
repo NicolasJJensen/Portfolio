@@ -1,12 +1,18 @@
-import React, {Fragment, useState} from 'react';
+import React, {useState} from 'react';
 
+//stylesheet for skills page and components that are used inside
 import SkillWheel from './components/SkillWheel';
 import SkillInfo from './components/SkillInfo';
-
 import './stylesheets/css/skills.css'
 
+// the component for the skills "page"
 export default function Skills(props) {
 
+  // a list of skills that I have used each containing
+  // name
+  // img location
+  // description
+  // my experience with the skill
   var programming = [
     {
       src: `${process.env.PUBLIC_URL}/images/Ruby.svg`,
@@ -58,6 +64,7 @@ export default function Skills(props) {
     }
   ]
 
+  // this is run whenever one of the skills is clicked
   var skillClicked = (skill, imgRect) => {
     setSkill({
       info: skill,
@@ -66,6 +73,7 @@ export default function Skills(props) {
     })
   }
 
+  // this resets the screen to no longer dispaly the information
   var returned = () => {
     setSkill()
   }
@@ -73,11 +81,11 @@ export default function Skills(props) {
   const [skill, setSkill] = useState(null)
 
   return (
-    <Fragment>
-      <main className="skills">
-        <SkillWheel skills={programming} skillClicked={skillClicked} />
-        <SkillInfo skill={skill && skill.info} imgRect={skill && skill.imgRect} render={skill && skill.render} back={returned}/>
-      </main>
-    </Fragment>
+
+    //the skillwheel and an initially hidden component with information on the skill
+    <main className="skills">
+      <SkillWheel skills={programming} skillClicked={skillClicked} />
+      <SkillInfo skill={skill && skill.info} imgRect={skill && skill.imgRect} render={skill && skill.render} back={returned}/>
+    </main>
   )
 }

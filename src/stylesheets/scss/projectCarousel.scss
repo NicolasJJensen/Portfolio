@@ -1,5 +1,8 @@
 @import './colors';
 
+// styling for the carousel component
+
+// container with carousel photo and info inside
 .carouselContainer {
   display: inline-flex;
 
@@ -9,6 +12,7 @@
   }
 }
 
+// inner container containering
 .frame {
   display: inline-flex;
   flex-direction: column;
@@ -16,11 +20,13 @@
   width: fit-content;
   padding-bottom: 30px;
 
+  // informatino
   & > p {
     width: fit-content;
     padding: 10px 0;
   }
 
+  // the image of the project
   & > .img {
     display: inline-block;
     background-color: rgba(0, 0, 0, 0.1);

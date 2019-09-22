@@ -1,10 +1,15 @@
 @import './colors';
 
+//styling for the navbar
+
+//move body down so content is displayed correctly
 body {
   padding-top: 65px;
   font-weight: 100;
 }
 
+
+// the container for the nav
 nav {
   display: flex;
   justify-content: space-around;
@@ -17,6 +22,7 @@ nav {
   width: 100vw;
   z-index: 3;
 
+  // my logo (just my name)
   .logo {
     color: $pale;
     text-transform: uppercase;
@@ -24,6 +30,7 @@ nav {
     font-size: 20px;
   }
 
+  // a list of links to different pages on the website
   .navLinks {
     opacity: 0.95;
     display: flex;
@@ -31,9 +38,11 @@ nav {
     justify-content: space-around;
     width: 60%;
 
+    // each link container
     li {
       list-style: none;
 
+      // each link
       a {
         color: $pale;
         text-decoration: none;
@@ -44,6 +53,8 @@ nav {
     }
   }
 
+  // a styled icon for options
+  // (only displayed on small screens)
   .burger {
     display: inline-flex;
     flex-direction: column;
@@ -62,12 +73,17 @@ nav {
   }
 }
 
+// code for small screens
 @media screen and (max-width: 768px) {
 
+  // stop users from being able to scroll to the right
   body{
     overflow-x: hidden;
   }
 
+  // move each link so they are vertically centered
+  // and in the middle of the screen
+  // then translate them off to the right
   nav > .navLinks {
     position: absolute;
     right: 0px;
@@ -81,37 +97,43 @@ nav {
     transform: translateX(100%);
     transition: transform 0.5s ease-in-out;
 
+    // add animation delay so each item comes in staggered
     li {
-
       @for $i from 1 through 10 {
         &:nth-child(#{$i}) {
           animation-delay: #{$i * 0.2} + 's'
         }
       }
 
+      // the animation to fade the items in
       &.fadeIn {
         opacity: 0;
         animation: navLinksFade 0.5s ease-in-out forwards;
       }
 
+      // each link
       a {
         font-size: 25px;
       }
     }
 
+    // code to animate the menu in from the right
     &.navActive {
       transition: transform 0.5s ease-in-out;
       transform: translateX(0%);
     }
   }
 
+  // display the icon
   nav > .burger {
     cursor: pointer;
     display: block;
 
+    // if menu is open
     &.toggle > div {
       transform-origin: 50% 50%;
 
+      // style the icon to transform into an X
       &:nth-child(1){
         transition: all 0.2s;
         transform: rotate(-45deg) translate(-3px, 10px);
@@ -131,6 +153,7 @@ nav {
   }
 }
 
+// animation for fading the links in
 @keyframes navLinksFade {
   from {
     opacity: 0;

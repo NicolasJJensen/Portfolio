@@ -5,6 +5,7 @@ import * as serviceWorker from './serviceWorker';
 import './stylesheets/css/index.css';
 import App from './App';
 
+// this renders the main controller componenet
 ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

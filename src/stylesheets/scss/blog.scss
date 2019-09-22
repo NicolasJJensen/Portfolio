@@ -1,7 +1,10 @@
 @import './colors';
 @import './badgeSize';
 
+// main content for the blog page
 main.blog {
+
+  // the container for the articles
   .articles {
     padding-top: #{$badgeHeight*0.3 + 'px'};
     color: $code;
@@ -12,6 +15,7 @@ main.blog {
     text-align: center;
   }
 
+  // the line break after the title
   hr {
     margin: 0 5vw;
   }

@@ -1,10 +1,14 @@
 @import './colors';
 
+// code for the articles
+
+//article container
 article {
   padding: 3rem 10vw;
   background-color: $pale;
   text-align: left;
 
+  // date article was published
   .date {
     text-align: center;
     margin-top: 10px;
@@ -12,26 +16,32 @@ article {
     opacity: 0.7;
   }
 
+  // the title of the article
   h2 {
     text-align: center;
   }
 
+  // the line break
   hr.articleHR {
     margin: 0;
     opacity: 0.2;
   }
 
+  // article is made up of multiple sections
   section {
     display: inline-block;
     padding: 1rem 0;
 
+    // section title
     h3 {
       padding: 1rem 0;
     }
 
+    // setion body
     p {
       font-weight: 100;
 
+      // img for section
       img {
         padding-right: 1rem;
         padding-bottom: 1rem;
@@ -41,13 +51,16 @@ article {
   }
 }
 
+// code to change layout if screen is too small
 @media screen and (max-width: 800px) {
   section {
 
+    // center the section title
     h3 {
       text-align: center;
     }
 
+    // display the img and text vertically instead of horizontally
     p {
       display: flex;
       flex-direction: column;

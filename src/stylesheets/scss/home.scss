@@ -3,11 +3,13 @@
 
 $navHeight: 64;
 
+// the styling for the homepage
 body {
   background-color: $code;
   height: calc(200vh - #{$badgeHeight + 'px'});
 }
 
+// the main content of the homepage
 main.home {
   position: relative;
   width: 100vw;
@@ -17,6 +19,7 @@ main.home {
   justify-content: center;
   flex-direction: column;
 
+  // my badge (halfway down screen)
   .myBadge {
     transform: none;
     position: relative;
@@ -25,6 +28,7 @@ main.home {
     background-color: $dark-peach;
   }
 
+  // main information about me
   & > .introduction {
     position: absolute;
     left: 50%;
@@ -32,28 +36,34 @@ main.home {
     font-weight: 200;
     color: $pale;
   
+    // anything inside should be centered
     & > * {
       text-align: center;
     }
   
+    // my name
     & > .mainIntro {
       font-size: 25px;
     }
   
+    // my job description
     & > .jobDescription {
       font-size: 22px;
     }
   
+    // style the title itself differently
     & .jobTitle {
       color: $peach;
     }
   
+    // style the name itself differently
     & .name {
       color: $yellow;
     }
   }
 }
 
+// the bottom menu of the homepage
 .menu {
   position: relative;
   top: calc(100vh - #{$badgeHeight*0.7+ 'px'});
@@ -66,11 +76,13 @@ main.home {
   flex-direction: column;
   text-align: center;
 
+  // each link
   & a {
     color: $paleText;
     text-decoration: none;
   }
 
+  // the container for each link
   & li {
     padding: 20px;
     font-size: 40px;
@@ -78,6 +90,7 @@ main.home {
     transform: translateX(200px);
     list-style: none;
 
+    // an animation to display the links
     &.fadeIn {
       transition: all 0.7s;
       opacity: 1;

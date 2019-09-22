@@ -1,10 +1,13 @@
 import React from 'react';
 
+//the stylesheet for the experience page and badge component
 import Badge from './components/Badge';
 import './stylesheets/css/experience.css'
 
-export default function App() {
+// the experience component 
+export default function Experience() {
 
+  // a list of places I've worked at ind information about my time there
   var experience = [
     {
       employer: 'Channel 7',
@@ -22,19 +25,26 @@ export default function App() {
     }
   ]
 
+  // the html code for the experience "page"
   return (
+    // main tag for semantics and ease of use
     <main class="experience">
+
+      {/* the badge to be displayed at the top of the screen */}
       <Badge />
 
+      {/* a call to action and button to download my resume */}
       <p>Download my resume</p>
       <a href="/images/myw3schoolsimage.jpg" download><img src={`${process.env.PUBLIC_URL}/images/download.svg`} alt="download resume" /></a>
 
+      {/* title telling users what the page is about */}
       <h1>Previous Work</h1>
 
       <br />
       <hr />
       <br />
 
+      {/* a loop to display the information about each job I've had in a specific format */}
       {experience.map(job => (
         <section>
           <span>
