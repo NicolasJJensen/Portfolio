@@ -1,0 +1,121 @@
+@import './colors';
+
+$littleSize: 20vw;
+$bigSize: 35vw;
+$maxSize: 100vw;
+
+.infoBox {
+  min-height: calc(100vh - 65px);
+  width: 100vw;
+  top: 0px;
+  position: absolute;
+  background-color: $code;
+  clip-path: circle(0% at 0 0);
+  transition: clip-path 1s;
+  line-height: 1.5rem;
+
+  .backButton {
+    position: absolute;
+    z-index: 3;
+    left: 5vw;
+    top: 20px;
+    color: $pale;
+    font-size: 20px;
+    font-weight: 200;
+  }
+
+  .titleBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+
+    .infoImg {
+      position: relative;
+      width: calc(0.7071 * #{$littleSize});
+      height: calc(0.7071 * #{$littleSize});
+      transform-origin: 0 0;
+
+      &.scaleImg {
+        animation: scaleImg 1s ease-in-out forwards;
+      }
+    }
+
+    .infoTitleContainer {
+      overflow: hidden;
+      padding-bottom: 10px;
+
+      .infoTitle {
+        color: $pale;
+        text-align: center;
+        position: relative;
+        top: calc(1em + 10px);
+        animation: moveUp 0.5s 1.2s forwards;
+      }
+    }
+  }
+
+  .infoBreak {
+    margin: 3rem;
+    border: 0.5px solid white;
+    opacity: 0.7;
+    width: 90vw;
+    height: 0px;
+    margin: 0 5vw;
+    transform: scale(0);
+
+    &.displayLine {
+      animation: displayLine 0.2s ease-in-out forwards 1s;
+    }
+  }
+
+  .info {
+    transition: opacity 0.5s;
+    opacity: 0;
+    padding: 0 5vw;
+    animation: textFade 0.5s 1.4s forwards;
+
+    section {
+      margin: 2rem 0;
+      color: white;
+
+      h2 {
+        font-size: 23px;
+        font-weight: 200;
+        margin-bottom: 5px;
+      }
+
+      p {
+        opacity: 0.7;
+        font-weight: 100;
+      }
+    }
+  }
+}
+
+@media screen and (min-aspect-ratio:1/1) {
+  $maxSize: 80vh;
+  $littleSize: 15vh;
+  $bigSize: 30vh;
+
+  .infoBox > .titleBar > .infoImg {
+    width: calc(0.7071 * #{$littleSize});
+    height: calc(0.7071 * #{$littleSize});
+  }
+}
+
+@keyframes moveUp {
+  0% {
+    top: calc(1em + 10px);
+  } 100% {
+    top: 0em;
+  }
+}
+
+@keyframes textFade {
+  0% {
+    opacity: 0;
+  } 100% {
+    opacity: 1;
+  }
+}

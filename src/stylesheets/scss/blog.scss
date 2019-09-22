@@ -1,0 +1,18 @@
+@import './colors';
+@import './badgeSize';
+
+main.blog {
+  .articles {
+    padding-top: #{$badgeHeight*0.3 + 'px'};
+    color: $code;
+    position: relative;
+    top: #{$badgeHeight*0.7 + 'px'};
+    background-color: $pale;
+    min-height: calc(100vh - #{65 + $badgeHeight*0.7 + 'px'});
+    text-align: center;
+  }
+
+  hr {
+    margin: 0 5vw;
+  }
+}

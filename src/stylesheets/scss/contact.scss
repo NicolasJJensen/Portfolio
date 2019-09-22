@@ -1,0 +1,89 @@
+@import './badgeSize';
+@import './colors';
+
+main.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  top: 65px;
+  height: calc(100vh - 65px);
+
+  .myBadge{
+    position: absolute;
+    background-color: $dark_peach;
+  }
+
+  h2 {
+    padding-top: calc(65px + 30vh);
+    text-align: center;
+    color: $peach;
+  }
+
+  ul {
+    height: 30vh;
+
+    li {
+      display: inline-block;
+      padding: 30px;
+      list-style: none;
+
+      a {
+        cursor: pointer;
+        width: 70px;
+        height: 70px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba($pale, 0.9);
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px 0 black;
+        transform-origin: 50% 50%;
+        transform: scale(1);
+        transition: all 0.3s;
+
+        &:hover {
+          box-shadow: 5px 5px 30px -10px black;
+          transform: scale(1.1);
+          transition: all 0.3s;
+        }
+
+        img {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  main.contact {
+    ul {
+      height: 40vh;
+      display: grid;
+      
+      li {
+        &:nth-child(1) {
+          grid-column: 1/1;
+          grid-row: 1/1;
+        }
+
+        &:nth-child(1) {
+          grid-column: 2/2;
+          grid-row: 1/1;
+        }
+
+        &:nth-child(1) {
+          grid-column: 1/1;
+          grid-row: 2/2;
+        }
+
+        &:nth-child(1) {
+          grid-column: 2/2;
+          grid-row: 2/2;
+        }
+      }
+    }
+  }
+}
