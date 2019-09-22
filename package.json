@@ -1,11 +1,16 @@
 {
-  "name": "portfolio-react",
+  "name": "portfolio-assignment",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.2"
+  },
+  "engines": {
+    "npm": "6.11.3",
+    "node": "12.8.1"
   },
   "scripts": {
     "start": "react-scripts start",
