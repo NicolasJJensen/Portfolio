@@ -5,8 +5,10 @@
 // container with carousel photo and info inside
 .carouselContainer {
   display: inline-flex;
+  color: $code;
 
   button {
+    color: $code;
     font-size: 50px;
     padding: 1em;
   }
